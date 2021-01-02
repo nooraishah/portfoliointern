@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src= "https://use.fontawesome.com/d1341f9b7a.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css')}}">
+
+</head>
+<body> 
+ <div class="box" >
+     <img src="https://bit.ly/2IVnVRv" alt="kidocode" class="box-img" >
+    <img src="{{url_for('static', filename='images/robot.png')}}" alt="robot" class="box-img1" >
+     <h1><strong>Portfolio InternCode</strong></h1>
+    <h5>Web Developer - Web Designer</h5>
+    <p>A web developer is one that develops applications and functionality for the Internet.
+        A web designer is a graphic artist who develops and styles objects for the Internet. 
+        Website designers are able to tap into their creative energy and design the overall layout and look for websites.
+    </p>
+    <div class ="search">
+    <form action="https://www.google.com/search">
+        <p>
+            <input type="text" name="q"/>
+            <input type="submit" value="Search" />
+        </p>
+    </form> 
+</div>  
+<ul>
+    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+<div class="information">
+    <div class="overlay"></div>
+    <img src="{{url_for('static', filename='images/webdevdes.png')}}" class="web">
+    <div id="square">
+        <div class="feature one">
+            <img src="{{url_for('static', filename='images/css1.png')}}">
+            <div>
+                <h3>CSS</h3>
+            </div>
+        </div>
+        <div class="feature two">
+            <img src="{{url_for('static', filename='images/database1.png')}}">
+            <div>
+                <h3>DATABASE</h3>
+            </div>
+        </div>
+        <div class="feature three">
+            <img src="{{url_for('static', filename='images/js1.png')}}">
+            <div>
+                <h3>JAVASCRIPT</h3>
+            </div>
+        </div>
+        <div class="feature four">
+            <img src="{{url_for('static', filename='images/html2.png')}}">
+            <div>
+                <h3>HTML</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="controls">
+    <img src="{{url_for('static', filename='images/web2.gif ')}}" class="controls-gif">
+    <img src="{{url_for('static', filename='images/arrow.png')}}" alt="arrow" id="upBtn">
+    <h3>What We Do?</h3>
+    <img src="{{url_for('static', filename='images/arrow.png')}}" alt="arrow" id="downBtn">
+    <img src="{{url_for('static', filename='images/web.gif ')}}" class="controls-gif">
+    </div>
+</div>
+ <script>
+     var square = document.getElementById("square");
+     var upBtn = document.getElementById("upBtn");
+     var downBtn = document.getElementById("downBtn");
+     
+     var rotateValue = square.style.transform;
+     var rotateSum;
+
+     upBtn.onclick = function()
+     {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        square.style.transform = rotateSum;
+        rotateValue = rotateSum;
+     }
+     downBtn.onclick = function()
+     {
+        rotateSum = rotateValue + "rotate( 90deg)";
+        square.style.transform = rotateSum;
+        rotateValue = rotateSum;
+     }
+ </script>
+</body>
+</html> 
