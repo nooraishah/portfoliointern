@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src= "https://use.fontawesome.com/d1341f9b7a.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body> 
+ <div class="box" >
+     <img src="https://bit.ly/2IVnVRv" alt="kidocode" class="box-img" >
+    <img src="{{url_for('static', filename='images/robot.png')}}" alt="robot" class="box-img1" >
+    
+    <h2 class="ml7">
+        <span class="text-wrapper">
+          <span class="letters">Portfolio InternCode</span>
+        </span>
+      </h2>
+    <h5>Web Developer - Web Designer</h5>
+    <p>A web developer is one that develops applications and functionality for the Internet.
+       A web designer is a graphic artist who develops and styles objects for the Internet. 
+        Website designers are able to tap into their creative energy and design the overall layout and look for websites.
+    </p>
+   
+    <div class ="search">
+    <form action="https://www.google.com/search">
+        <p>
+            <input type="text" name="q"/>
+            <input type="submit" value="Search" />
+        </p>
+    </form> 
+</div>  
+<ul>
+    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+    <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+    <li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+</ul>
+</div>
+<div class="information">
+    <div class="overlay"></div>
+    <img src="{{url_for('static', filename='images/webdevdes.png')}}" class="web">
+    <div id="square">
+        <div class="feature one">
+            <img src="{{url_for('static', filename='images/cssN.png')}}">
+            <div>
+                <h1 class="ml11">
+                    <span class="text-wrapper">
+                      <span class="line line1"></span>
+                      <span class="letters">CSS</span>
+                    </span>
+                </h1>
+            </div>
+        </div>
+        <div class="feature two">
+            <img src="{{url_for('static', filename='images/databaseN.png')}}">
+            <div>
+                <h1 class="ml11">
+                    <span class="text-wrapper">
+                      <span class="line line1"></span>
+                      <span class="letters">DATABASE</span>
+                    </span>
+                </h1>
+            </div>
+        </div>
+        <div class="feature three">
+            <img src="{{url_for('static', filename='images/jsN.png')}}">
+            <div>
+                <h1 class="ml11">
+                    <span class="text-wrapper">
+                      <span class="line line1"></span>
+                      <span class="letters">JAVASCRIPT</span>
+                    </span>
+                </h1>
+            </div>
+        </div>
+        <div class="feature four">
+            <img src="{{url_for('static', filename='images/htmlN.png')}}">
+            <div>
+                <h1 class="ml11">
+                    <span class="text-wrapper">
+                      <span class="line line1"></span>
+                      <span class="letters">HTML</span>
+                    </span>
+                </h1>
+                  
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<div class="controls">
+    <img src="{{url_for('static', filename='images/web2.gif ')}}" class="controls-gif">
+    <img src="{{url_for('static', filename='images/arrow.png')}}" alt="arrow" id="upBtn">
+    <h3 class="ml11">
+        <span class="text-wrapper">
+          <span class="letters">What We do?</span>
+        </span>
+      </h3>
+
+    <img src="{{url_for('static', filename='images/arrow.png')}}" alt="arrow" id="downBtn">
+    <img src="{{url_for('static', filename='images/web.gif ')}}" class="controls-gif">
+    </div>
+</div>
+<script>
+var square = document.getElementById("square");
+var upBtn = document.getElementById("upBtn");
+var downBtn = document.getElementById("downBtn");
+
+var rotateValue = square.style.transform;
+var rotateSum;
+
+upBtn.onclick = function()
+{
+   rotateSum = rotateValue + "rotate(-90deg)";
+   square.style.transform = rotateSum;
+   rotateValue = rotateSum;
+}
+downBtn.onclick = function()
+{
+   rotateSum = rotateValue + "rotate( 90deg)";
+   square.style.transform = rotateSum;
+   rotateValue = rotateSum;
+}
+
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml7 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml7 .letter',
+    translateY: ["1.1em", 0],
+    translateX: ["0.55em", 0],
+    translateZ: 0,
+    rotateZ: [180, 0],
+    duration: 750,
+    easing: "easeOutExpo",
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml7',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+</script>
+<div id="year-chart"></div>
+</body>
+</html> 
