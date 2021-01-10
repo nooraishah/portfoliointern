@@ -1,0 +1,1 @@
+web: gunicorn portfolioflask.py: app
