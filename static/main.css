@@ -148,12 +148,14 @@ ul{
     margin: 15px ;
     color: rgb(0, 0, 0);
 }
-.controls-gif{
+
+.controls-img{
     width: 300px;
     height: 300px;
     padding-left: -50px;
     padding-bottom: 20px; 
 } 
+
 #upBtn{
     width: 15px;
     cursor: pointer;
