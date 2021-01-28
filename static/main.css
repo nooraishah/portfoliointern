@@ -131,14 +131,13 @@ ul{
 
 }
 .controls{
-    position: absolute;
     left: 80%;
     top: 48%;
     transform: translateY(-50%);
     text-align: center;
     border-radius: 10%;
     width: 220px;
-    height: 800px;
+    height: 500px;
     background: rgb(255, 255, 255);
     padding: 65px;
     margin-top: 4%;
@@ -154,7 +153,7 @@ ul{
 #upBtn{
     width: 15px;
     cursor: pointer;
-     position: center;   
+    position: center;   
 }
 #downBtn{
     width: 15px;
