@@ -142,6 +142,7 @@ ul{
     background: rgb(255, 255, 255);
     padding: 65px;
     margin-top: 4%;
+    position: center;  
 
 }
 .controls h3{
@@ -149,21 +150,17 @@ ul{
     color: rgb(0, 0, 0);
 }
 
-.controls-img{
-    width: 300px;
-    height: 300px;
-    padding-left: -50px;
-    padding-bottom: 20px; 
-} 
 
 #upBtn{
     width: 15px;
     cursor: pointer;
+     position: center;   
 }
 #downBtn{
     width: 15px;
     cursor: pointer;
     transform: rotate(180deg);
+    position: center;  
 }
 .overlay{
     width: 100px;
