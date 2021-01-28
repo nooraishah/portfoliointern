@@ -131,40 +131,36 @@ ul{
 
 }
 .controls{
+    width: 220px;
+    height: 150px;
+    position: absolute;
     left: 80%;
     top: 48%;
     transform: translateY(-50%);
     text-align: center;
     border-radius: 10%;
-    width: 220px;
-    height: 500px;
     background: rgb(255, 255, 255);
     padding: 65px;
-    margin-top: 1%;
-    position: center;  
-
+    margin-top: 4%;
 }
 
-<<<<<<< HEAD
-.controls-gif{
-    width: 300px;
-    height: 300px;
-    padding-left: -50px;
-    padding-bottom: 20px; 
+#gif{
+    width: 270px;
+    height: 270px;
+    padding-left: -10px;
+    padding-top: 100px; 
 } 
-=======
->>>>>>> 2be5a05a1568bcc68af7fbb4bb3eb7bf319a0611
-
 #upBtn{
     width: 15px;
+    padding-bottom: 10px; 
     cursor: pointer;
-    position: center;   
+    
 }
 #downBtn{
     width: 15px;
+    padding-bottom: 10px; 
     cursor: pointer;
     transform: rotate(180deg);
-    position: center;  
 }
 .overlay{
     width: 100px;
@@ -202,6 +198,7 @@ ul{
 .ml11 {
     font-weight: 700;
     font-size: 1.5em;
+    
   }
   
 .ml11 .text-wrapper {
@@ -214,7 +211,7 @@ ul{
   
 .ml11 .line {
     opacity: 0;
-    position: center;
+    position: absolute;
     left: 0;
     height: 100%;
     width: 4px;
